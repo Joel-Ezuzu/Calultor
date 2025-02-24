@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -7,59 +7,59 @@ body{
   background-color: hsla(0, 7%, 26%, 0.171);
 }
 
-#Calc{
+#Calc {
   font-family: Arial, Helvetica, sans-serif;
   background-color: hsl(0, 0%, 0%);
   border-radius: 15px;
-  max-width: 500px;
+  max-width: 90vw; /* Adjust for smaller screens */
   overflow: hidden;
 }
 
-#display{
+#display {
   width: 100%;
   padding: 20px;
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem); /* Adjust size dynamically */
   text-align: left;
   border: none;
   background-color: hsl(0, 0%, 25%);
   color: white;
 }
 
-#Keys{
- display: grid;
- grid-template-columns: repeat(4,1fr);
- gap: 10px;
- padding: 25px;
+#Keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(60px, 1fr)); /* Adapt size */
+  gap: 10px;
+  padding: 25px;
 }
 
-button{
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+button {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1; /* Ensures square shape */
+  border-radius: 50%;
   border: none;
   background-color: hsl(0, 0%, 13%);
   color: white;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Adjust size dynamically */
   font-weight: bold;
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: hsl(0, 0%, 40%);
 }
 
-button:active{
+button:active {
   background-color: hsl(0, 0%, 50%);
 }
 
-.operator-btn{
+.operator-btn {
   background-color: hsl(36, 100%, 50%);
   color: hsl(0, 0%, 0%);
 }
-.operator-btn:hover{
+.operator-btn:hover {
   background-color: hsl(35, 100%, 60%);
 }
-
-.operator-btn:active{
+.operator-btn:active {
   background-color: hsl(35, 100%, 75%);
 }
