@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsla(0, 7%, 26%, 0.171);
+}
+
+#Calc {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 3%;
+  max-width: 90vw; /* Adjusts for smaller screens */
+  width: 100%;
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 4%;
+  font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
+  text-align: left;
+  border: none;
+  background-color: hsl(0, 0%, 25%);
+  color: white;
+}
+
+#Keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(60px, 1fr)); /* Flexible button sizes */
+  gap: 2%;
+  padding: 5%;
+}
+
+button {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1; /* Keeps buttons square */
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 13%);
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem); /* Adjust size dynamically */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn {
+  background-color: hsl(36, 100%, 50%);
+  color: hsl(0, 0%, 0%);
+}
+.operator-btn:hover {
+  background-color: hsl(35, 100%, 60%);
+}
+.operator-btn:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+/* Media Query for Smaller Mobile Screens */
+@media (max-width: 400px) {
+  #display {
+    font-size: clamp(1.5rem, 6vw, 3rem); /* Adjust font size for small devices */
+  }
+  button {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Reduce button font size */
+  }
+}
